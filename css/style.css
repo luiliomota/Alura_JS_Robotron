@@ -11,7 +11,7 @@
 body {
     background: url(../img/fundo.jpg);
     background-position: center center;
-    background-size: cover cover;
+    background-size: cover;
     padding: 0;
     margin: 0;
     font-weight: 300;
@@ -28,7 +28,6 @@ main {
     display: flex;
     gap: 1vw;
 }
-
 .robotron {
     background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
@@ -37,20 +36,130 @@ main {
     position: relative;
 }
 
-.robo {
-    height: 110%;
-    z-index: 1;
-    position: absolute;
-    left: -20%;
-    top: -5%;
+.cor_do_robotron {
+    flex-basis: 20%;
+}
+.paletas {
+    height: 100%;;
+    width: 86%;
 }
 
+.cores-conteudo {
+    padding: 2em 10%;
+}
+
+.cores {
+    padding: 1em 0;
+}
+
+.titulo-cor {
+    color: var(--main-branco);
+    padding: 15%;
+    text-transform: initial;
+    font-size: 1.5em;
+}
+
+.conteudo {
+    border-radius: 25px;
+    float: none;
+    display: inline-flex;
+    padding: 10px;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.box-cores {
+    background: rgba(0,0,0,0.6);
+    clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
+    border-left: 5px solid var(--main-cinza);
+    height: 105%;
+}
+.cor-amarelo {
+    cursor: pointer;
+    background: yellow;
+    padding: 15px;
+}
+.cor-azul {
+    cursor: pointer;
+    background: blue;
+    padding: 15px;
+}
+.cor-branco {
+    cursor: pointer;
+    background: white;
+    padding: 15px;
+}
+.cor-preto {
+    cursor: pointer;
+    background: black;
+    padding: 15px;
+}
+.cor-rosa {
+    cursor: pointer;
+    background: deeppink;
+    padding: 15px;
+}
+.cor-vermelho {
+    cursor: pointer;
+    background: red;
+    padding: 15px;
+}
+
+.robo {
+    height: 65%;
+    z-index: 1;
+    position: absolute;
+    left: 113%;
+    top: 47%;
+}
+.roboA {
+    height: 65%;
+    z-index: 1;
+    position: absolute;
+    left: 58%;
+    top: -8%;
+}
+.roboC {
+    height: 56%;
+    z-index: 1;
+    position: absolute;
+    left: 61%;
+    top: 31%;
+}
+.roboB {
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 41%;
+    top: 44%;;
+}
+.roboVermelho {
+    height: 50%;
+    z-index: 1;
+    position: absolute;
+    left: 10%;
+    top: -5%;
+}
+.roboAmarelo {
+    height: 50%;
+    z-index: 1;
+    position: absolute;
+    left: 10%;
+    top: 27%;
+}
+.roboPreto {
+    height: 50%;
+    z-index: 1;
+    position: absolute;
+    left: 10%;
+    top: 60%;
+}
 .titulo {
     transform: rotate(180deg);
     font-weight: 500;
     font-size: 130px;
     position: absolute;
-    bottom: 7rem;
+    bottom: 0;
     left: -3rem;
     line-height: 0.8;
     writing-mode: vertical-rl;
@@ -62,7 +171,8 @@ main {
     background: rgba(0,0,0,0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
-    height: 80%;
+    height: 105%;
+    width: 70%;
 }
 
 /****************************** Equipamentos *****/
@@ -77,6 +187,7 @@ main {
 
 .montador-conteudo {
     padding: 2em 10%;
+    margin-left: 130px;
 }
 
 .peca {
@@ -86,9 +197,8 @@ main {
 .peca-titulo {
     color: var(--main-branco);
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 2em;
 }
-
 .controle {
     background: var(--main-preto);
     border-radius: 25px;
@@ -152,7 +262,7 @@ main {
 
 /****************************** Estatísticas *****/
 .estatisticas {
-    flex-basis: 23%;
+    flex-basis: 20%;
     padding: 2em 2em 0;
 }
 
@@ -160,7 +270,7 @@ main {
     color: var(--main-branco);
     display: flex;
     align-items: flex-start;
-    height: 25%;
+    height: 16%;
 }
 
 .estatistica-titulo {
@@ -210,8 +320,8 @@ main {
 }
 
 @media screen and (max-width: 1600px) {
-    body { 
-        font-size: 14px;
+    body {
+        font-size: 11px;
     }
     main {
         width: 90vw;
