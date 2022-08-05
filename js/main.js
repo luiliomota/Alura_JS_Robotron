@@ -68,5 +68,5 @@ function atualizaEstatistica(peca){
 }
 
 function alteraCor (cor) {
-    imagem.attributes["src"].textContent = "img/" + cor + "/robotron.png";
+    imagem.attributes["src"].textContent = "img/robotron-" + cor + ".png";
 }
